@@ -1,0 +1,243 @@
+{
+    "settings": {
+        "language": "繁體中文",
+        "server_url": "",
+        "server_mount_path": ""
+    },
+    "llms_api": {
+        "gemini-2.5-flash": {
+            "enum_llm": "gemini-2.5-flash",
+            "api_key": "AIzaSyAcWe5oRmWaXpXG_YJxO7ELhGwI4OjzGvk",
+            "temperature": 0.7,
+            "context_length": 2048,
+            "timeout": 0
+        },
+        "deepseek-chat": {
+            "enum_llm": "deepseek-chat",
+            "api_key": "sk-a33fb5b46c824250a43f7efcf61f476e",
+            "temperature": 0.7,
+            "context_length": 2048,
+            "timeout": 0
+        }
+    },
+    "knowledge_collections": {
+        "syntak_products": {
+            "enum_storage_type": "chunk",
+            "knowledge_files_path": [
+                "C:/心特/SALES/Promotion/心特公司與產品介紹.txt",
+                "C:/心特/SALES/Promotion/型錄文稿-MBV, MRV.txt",
+                "C:/心特/SALES/Promotion/心特公司與產品介紹.txt",
+                "C:/心特/SALES/Promotion/型錄文稿-MBV, MRV.txt",
+                "C:/心特/SALES/Promotion/Syntak Machine Tools.ppt",
+                "C:/心特/PRODUCTS/MBV/Specification MBV.docx",
+                "C:/心特/PRODUCTS/MRU/Specification MRU.docx"
+            ],
+            "description": "心特產品",
+            "collection_name": "syntak_products",
+            "chunk_size": 512,
+            "chunk_overlap": 50,
+            "embed_model_name": "sentence-transformers/all-MiniLM-L6-v2",
+            "persist_directory": "/var/share/syntak",
+            "is_persist_at_server": true,
+            "server_url": "https://192.168.0.190:1688",
+            "is_vectorized": false,
+            "project_name": null
+        },
+        "syntak_services": {
+            "enum_storage_type": "chunk",
+            "knowledge_files_path": [
+                "C:/心特/SERVICE/Linear Scale Maintenance.docx",
+                "C:/心特/SERVICE/MRU60 Check and Adjust rotary table to other axis.docx",
+                "C:/心特/SERVICE/售後服務記錄.xls",
+                "C:/心特/MANUALS/User Manual-MRU, Heidenhain.pdf",
+                "C:/心特/MANUALS/SUM-001 EN-User Manual-MBV, Fanuc 0iM.pdf"
+            ],
+            "description": "心特服務",
+            "collection_name": "syntak_services",
+            "chunk_size": 512,
+            "chunk_overlap": 50,
+            "embed_model_name": "sentence-transformers/all-MiniLM-L6-v2",
+            "persist_directory": "/var/share/syntak",
+            "is_persist_at_server": true,
+            "server_url": "https://192.168.0.190:1688",
+            "is_vectorized": false,
+            "project_name": null
+        },
+        "basic_english_grammer": {
+            "enum_storage_type": "chunk",
+            "knowledge_files_path": [
+                "C:/語言/英文/基本英文文法.md"
+            ],
+            "description": "基本英文文法",
+            "collection_name": "basic_english_grammer",
+            "chunk_size": 512,
+            "chunk_overlap": 50,
+            "embed_model_name": "sentence-transformers/all-MiniLM-L6-v2",
+            "persist_directory": "/var/share/TutorEnglish",
+            "is_persist_at_server": true,
+            "server_url": "https://192.168.0.190:11435",
+            "is_vectorized": false,
+            "project_name": "tutor_english"
+        },
+        "junior_high_english_sentences": {
+            "enum_storage_type": "chunk",
+            "knowledge_files_path": [
+                "C:/語言/英文/國中英文句型.md"
+            ],
+            "description": "國中英文句型",
+            "collection_name": "junior_high_english_sentences",
+            "chunk_size": 512,
+            "chunk_overlap": 50,
+            "embed_model_name": "sentence-transformers/all-MiniLM-L6-v2",
+            "persist_directory": "/var/share/TutorEnglish",
+            "is_persist_at_server": true,
+            "server_url": "https://192.168.0.190:11435",
+            "is_vectorized": true,
+            "project_name": "tutor_english"
+        },
+        "junior_high_english_idioms": {
+            "enum_storage_type": "chunk",
+            "knowledge_files_path": [
+                "C:/語言/英文/國中英文片語.md"
+            ],
+            "description": "國中英文片語",
+            "collection_name": "junior_high_english_idioms",
+            "chunk_size": 512,
+            "chunk_overlap": 50,
+            "embed_model_name": "sentence-transformers/all-MiniLM-L6-v2",
+            "persist_directory": "/var/share/TutorEnglish",
+            "is_persist_at_server": true,
+            "server_url": "https://192.168.0.190:11435",
+            "is_vectorized": true,
+            "project_name": null
+        },
+        "junior_high_english_vocabulary": {
+            "enum_storage_type": "chunk",
+            "knowledge_files_path": [
+                "C:/語言/英文/國中英文字彙.md"
+            ],
+            "description": "國中英文字彙",
+            "collection_name": "junior_high_english_vocabulary",
+            "chunk_size": 512,
+            "chunk_overlap": 50,
+            "embed_model_name": "sentence-transformers/all-MiniLM-L6-v2",
+            "persist_directory": "/var/share/TutorEnglish",
+            "is_persist_at_server": true,
+            "server_url": "https://192.168.0.190:11435",
+            "is_vectorized": true,
+            "project_name": null
+        },
+        "english_punctuation": {
+            "enum_storage_type": "chunk",
+            "knowledge_files_path": [
+                "C:/語言/英文/英文標點符號用法.md"
+            ],
+            "description": "英文標點符號",
+            "collection_name": "english_punctuation",
+            "chunk_size": 512,
+            "chunk_overlap": 50,
+            "embed_model_name": "sentence-transformers/all-MiniLM-L6-v2",
+            "persist_directory": "/var/share/TutorEnglish",
+            "is_persist_at_server": true,
+            "server_url": "https://192.168.0.190:11435",
+            "is_vectorized": true,
+            "project_name": null
+        },
+        "english_teaching_for_chinese": {
+            "enum_storage_type": "chunk",
+            "knowledge_files_path": [
+                "C:/語言/英文/專門替中國人寫的英文教學講義.md"
+            ],
+            "description": "專門替中國人寫的英文教學講義",
+            "collection_name": "english_teaching_for_chinese",
+            "chunk_size": 512,
+            "chunk_overlap": 50,
+            "embed_model_name": "sentence-transformers/all-MiniLM-L6-v2",
+            "persist_directory": "/var/share/TutorEnglish",
+            "is_persist_at_server": true,
+            "server_url": "https://192.168.0.190:11435",
+            "is_vectorized": true,
+            "project_name": null
+        },
+        "tips_learn_chinese": {
+            "enum_storage_type": "chunk",
+            "knowledge_files_path": [
+                "C:/Projects/Hybrid/LearnChinese/RAG material/tips for learning Chinese.txt"
+            ],
+            "description": "Tips for learning Chinese",
+            "collection_name": "tips_learn_chinese",
+            "chunk_size": 512,
+            "chunk_overlap": 50,
+            "embed_model_name": "sentence-transformers/all-MiniLM-L6-v2",
+            "persist_directory": "/var/share/LearnChinese",
+            "is_persist_at_server": true,
+            "server_url": "https://192.168.0.190:1688/",
+            "is_vectorized": false,
+            "project_name": null
+        },
+        "chinese_grammer": {
+            "enum_storage_type": "chunk",
+            "knowledge_files_path": [
+                "C:/Projects/Hybrid/LearnChinese/RAG material/Chinese grammer.md"
+            ],
+            "description": "Chinese Grammer",
+            "collection_name": "chinese_grammer",
+            "chunk_size": 512,
+            "chunk_overlap": 50,
+            "embed_model_name": "sentence-transformers/all-MiniLM-L6-v2",
+            "persist_directory": "/var/share/LearnChinese",
+            "is_persist_at_server": true,
+            "server_url": "https://192.168.0.190:1688/",
+            "is_vectorized": true,
+            "project_name": null
+        },
+        "chinese_idioms": {
+            "enum_storage_type": "chunk",
+            "knowledge_files_path": [
+                "C:/Projects/Hybrid/LearnChinese/RAG material/Chinese idioms.md"
+            ],
+            "description": "Chinese Idioms",
+            "collection_name": "chinese_idioms",
+            "chunk_size": 512,
+            "chunk_overlap": 50,
+            "embed_model_name": "sentence-transformers/all-MiniLM-L6-v2",
+            "persist_directory": "/var/share/LearnChinese",
+            "is_persist_at_server": true,
+            "server_url": "https://192.168.0.190:1688/",
+            "is_vectorized": true,
+            "project_name": null
+        },
+        "chinese_sentence_patterns": {
+            "enum_storage_type": "chunk",
+            "knowledge_files_path": [
+                "C:/Projects/Hybrid/LearnChinese/RAG material/Chinese sentence patterns.md"
+            ],
+            "description": "Chinese Sentence Patterns",
+            "collection_name": "chinese_sentence_patterns",
+            "chunk_size": 512,
+            "chunk_overlap": 50,
+            "embed_model_name": "sentence-transformers/all-MiniLM-L6-v2",
+            "persist_directory": "/var/share/LearnChinese",
+            "is_persist_at_server": true,
+            "server_url": "https://192.168.0.190:1688/",
+            "is_vectorized": false,
+            "project_name": null
+        },
+        "chinese_punctuation": {
+            "enum_storage_type": "chunk",
+            "knowledge_files_path": [
+                "C:/Projects/Hybrid/LearnChinese/RAG material/Chinese punctuation.md"
+            ],
+            "description": "Chinese Punctuation",
+            "collection_name": "chinese_punctuation",
+            "chunk_size": 512,
+            "chunk_overlap": 50,
+            "embed_model_name": "sentence-transformers/all-MiniLM-L6-v2",
+            "persist_directory": "/var/share/LearnChinese",
+            "is_persist_at_server": true,
+            "server_url": "https://192.168.0.190:1688/",
+            "is_vectorized": false,
+            "project_name": null
+        }
+    }
+}

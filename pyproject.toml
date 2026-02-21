@@ -1,0 +1,71 @@
+# 創建或更新為標準的 pyproject.toml
+[project]
+name = "wofa-ide"
+version = "1.0.3"
+description = "Syntak WorkFlow Automation IDE"
+authors = [
+    {name = "Ted Hsieh", email = "ted1966@gmail.com"}
+]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.11,<=3.14"
+dependencies = [
+    "duckduckgo_search",
+    "requests==2.32.4",
+    "requests-oauthlib==2.0.0",
+    "requests-toolbelt==1.0.0",
+    "typer==0.16.0",
+    "typing-inspect==0.9.0",
+    "typing-inspection==0.4.1",
+    "typing-extensions==4.14.0",
+    "sentence-transformers==5.0.0 ; sys_platform != 'darwin'",
+    "pypubsub",
+    # 本地依賴需要單獨安裝
+    "torch; sys_platform != 'darwin'",
+    #"torch==2.7.1; sys_platform != 'darwin'",
+    "torchvision==0.22.1 ; sys_platform != 'darwin'",
+    #"py_libraries",
+    #'py_llm_api',
+    #'py_workflow',
+]
+
+
+
+# 可选的开发依赖
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.8.4",
+    "pytest>=8.3.2",
+    "black>=24.0.0",
+    "mypy>=1.10.0",
+]
+
+# 构建系统配置（uv 推荐使用 hatchling）
+#[build-system]
+#requires = ["setuptools"]
+#build-backend = "setuptools.build_meta"
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/wofa_ide"]
+
+# uv 特定配置（可选）
+[tool.uv]
+# 可以配置 uv 的行为
+# 例如：link-mode = "copy"  # 或 "symlink"
+[tool.uv.sources]
+# 這裡的路徑是相對於 pyproject.toml 所在的專案根目錄
+#py_libraries = { path = "../../Library/python/py_libraries", editable = true }
+#py_llm_api = { path = "../../Library/python/py_llm_api", editable = true }
+#py_workflow = { path = "../../Library/python/py_workflow", editable = true }
+
+# 代码质量工具配置
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
